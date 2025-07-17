@@ -52,12 +52,10 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a class="nav-link active fw-semibold" href="index.html"
-                  >Home</a
-                >
+                <a class="nav-link fw-semibold" href="index.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link fw-semibold" href="products.html"
+                <a class="nav-link fw-semibold active" href="products.html"
                   >Products</a
                 >
               </li>
@@ -80,62 +78,73 @@
       </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero-section bg-success bg-gradient text-white">
+    <!-- Page Header -->
+    <section class="page-header bg-success bg-gradient text-white py-5">
       <div class="container">
-        <div class="row align-items-center min-vh-100 py-5">
-          <div class="col-lg-6">
-            <h1 class="display-4 fw-bold mb-4 animate-fade-in">
-              Fresh & Premium Quality
-            </h1>
-            <p class="lead mb-4 animate-fade-in-delay">
-              Discover the finest selection of organic foods and premium
-              beverages delivered fresh to your doorstep
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <h1 class="display-4 fw-bold mb-3">Our Premium Products</h1>
+            <p class="lead mb-0">
+              Discover our carefully selected range of organic foods and premium
+              beverages
             </p>
-            <div class="d-flex gap-3 flex-wrap animate-fade-in-delay-2">
-              <a
-                href="products.html"
-                class="btn btn-light btn-lg px-4 py-3 fw-semibold"
-              >
-                <i class="bi bi-bag-check me-2"></i>Shop Now
-              </a>
-              <a
-                href="about.html"
-                class="btn btn-outline-light btn-lg px-4 py-3 fw-semibold"
-              >
-                <i class="bi bi-info-circle me-2"></i>Learn More
-              </a>
-            </div>
           </div>
-          <div class="col-lg-6 text-center">
-            <div
-              class="hero-card bg-white text-dark p-5 rounded-4 shadow-lg animate-float"
-            >
-              <i class="bi bi-basket2 text-success display-1 mb-3"></i>
-              <h3 class="fw-bold text-success">🥗 Fresh Produce</h3>
-              <p class="mb-0 text-muted">Organic & Natural</p>
-            </div>
+          <div class="col-lg-4 text-end">
+            <i class="bi bi-grid-3x3-gap display-1 opacity-50"></i>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Featured Products Section -->
-    <section class="py-5 bg-light">
+    <!-- Products Section -->
+    <section class="py-5">
       <div class="container">
-        <div class="text-center mb-5">
-          <h2 class="display-5 fw-bold text-dark">Featured Products</h2>
-          <p class="lead text-muted">
-            Handpicked favorites from our premium collection
-          </p>
+        <!-- Filter Buttons -->
+        <div class="row mb-5">
+          <div class="col-12">
+            <div class="d-flex justify-content-center flex-wrap gap-2">
+              <button
+                class="btn btn-success filter-btn active"
+                data-filter="all"
+              >
+                All Products
+              </button>
+              <button
+                class="btn btn-outline-success filter-btn"
+                data-filter="fruits"
+              >
+                Fruits
+              </button>
+              <button
+                class="btn btn-outline-success filter-btn"
+                data-filter="beverages"
+              >
+                Beverages
+              </button>
+              <button
+                class="btn btn-outline-success filter-btn"
+                data-filter="dairy"
+              >
+                Dairy
+              </button>
+              <button
+                class="btn btn-outline-success filter-btn"
+                data-filter="snacks"
+              >
+                Snacks
+              </button>
+            </div>
+          </div>
         </div>
 
-        <div class="row g-4">
-          <div class="col-md-6 col-lg-4">
+        <!-- Products Grid -->
+        <div class="row g-4" id="products-grid">
+          <!-- Fruits -->
+          <div class="col-lg-4 col-md-6 product-item" data-category="fruits">
             <div class="card h-100 shadow-sm product-card">
               <div
                 class="card-img-top bg-success bg-opacity-10 d-flex align-items-center justify-content-center"
-                style="height: 200px"
+                style="height: 250px"
               >
                 <span class="display-1">🍎</span>
               </div>
@@ -145,11 +154,21 @@
                 <p class="card-text text-muted">
                   Sweet and crispy organic apples, perfect for healthy snacking
                 </p>
+                <div class="mb-2">
+                  <span class="text-warning">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </span>
+                  <small class="text-muted">(4.8)</small>
+                </div>
                 <div class="d-flex justify-content-between align-items-center">
                   <span class="h5 text-success fw-bold mb-0"
                     >$3.99 <small class="text-muted">/lb</small></span
                   >
-                  <button class="btn btn-success btn-sm add-to-cart">
+                  <button class="btn btn-success add-to-cart">
                     <i class="bi bi-cart-plus me-1"></i>Add to Cart
                   </button>
                 </div>
@@ -157,11 +176,48 @@
             </div>
           </div>
 
-          <div class="col-md-6 col-lg-4">
+          <div class="col-lg-4 col-md-6 product-item" data-category="fruits">
             <div class="card h-100 shadow-sm product-card">
               <div
                 class="card-img-top bg-warning bg-opacity-10 d-flex align-items-center justify-content-center"
-                style="height: 200px"
+                style="height: 250px"
+              >
+                <span class="display-1">🍌</span>
+              </div>
+              <div class="card-body">
+                <span class="badge bg-warning mb-2">Organic</span>
+                <h5 class="card-title fw-bold">Premium Bananas</h5>
+                <p class="card-text text-muted">
+                  Naturally ripened bananas, rich in potassium and vitamins
+                </p>
+                <div class="mb-2">
+                  <span class="text-warning">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </span>
+                  <small class="text-muted">(4.9)</small>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="h5 text-success fw-bold mb-0"
+                    >$2.49 <small class="text-muted">/bunch</small></span
+                  >
+                  <button class="btn btn-success add-to-cart">
+                    <i class="bi bi-cart-plus me-1"></i>Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Beverages -->
+          <div class="col-lg-4 col-md-6 product-item" data-category="beverages">
+            <div class="card h-100 shadow-sm product-card">
+              <div
+                class="card-img-top bg-warning bg-opacity-10 d-flex align-items-center justify-content-center"
+                style="height: 250px"
               >
                 <span class="display-1">🥤</span>
               </div>
@@ -171,11 +227,21 @@
                 <p class="card-text text-muted">
                   100% pure orange juice, no added sugar or preservatives
                 </p>
+                <div class="mb-2">
+                  <span class="text-warning">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star"></i>
+                  </span>
+                  <small class="text-muted">(4.7)</small>
+                </div>
                 <div class="d-flex justify-content-between align-items-center">
                   <span class="h5 text-success fw-bold mb-0"
                     >$4.99 <small class="text-muted">/bottle</small></span
                   >
-                  <button class="btn btn-success btn-sm add-to-cart">
+                  <button class="btn btn-success add-to-cart">
                     <i class="bi bi-cart-plus me-1"></i>Add to Cart
                   </button>
                 </div>
@@ -183,11 +249,12 @@
             </div>
           </div>
 
-          <div class="col-md-6 col-lg-4">
+          <!-- Dairy -->
+          <div class="col-lg-4 col-md-6 product-item" data-category="dairy">
             <div class="card h-100 shadow-sm product-card">
               <div
                 class="card-img-top bg-info bg-opacity-10 d-flex align-items-center justify-content-center"
-                style="height: 200px"
+                style="height: 250px"
               >
                 <span class="display-1">🥛</span>
               </div>
@@ -197,103 +264,98 @@
                 <p class="card-text text-muted">
                   Creamy whole milk from grass-fed cows, hormone-free
                 </p>
+                <div class="mb-2">
+                  <span class="text-warning">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star"></i>
+                  </span>
+                  <small class="text-muted">(4.6)</small>
+                </div>
                 <div class="d-flex justify-content-between align-items-center">
                   <span class="h5 text-success fw-bold mb-0"
                     >$5.29 <small class="text-muted">/gallon</small></span
                   >
-                  <button class="btn btn-success btn-sm add-to-cart">
+                  <button class="btn btn-success add-to-cart">
                     <i class="bi bi-cart-plus me-1"></i>Add to Cart
                   </button>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="text-center mt-5">
-          <a href="products.html" class="btn btn-success btn-lg px-5 py-3">
-            <i class="bi bi-grid me-2"></i>View All Products
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="py-5">
-      <div class="container">
-        <div class="row g-4">
-          <div class="col-md-4">
-            <div class="text-center feature-item">
+          <!-- Snacks -->
+          <div class="col-lg-4 col-md-6 product-item" data-category="snacks">
+            <div class="card h-100 shadow-sm product-card">
               <div
-                class="feature-icon bg-success text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+                class="card-img-top bg-danger bg-opacity-10 d-flex align-items-center justify-content-center"
+                style="height: 250px"
               >
-                <i class="bi bi-leaf fs-1"></i>
+                <span class="display-1">🥜</span>
               </div>
-              <h4 class="fw-bold">100% Organic</h4>
-              <p class="text-muted">
-                All our products are certified organic and naturally grown
-              </p>
+              <div class="card-body">
+                <span class="badge bg-danger mb-2">Artisan</span>
+                <h5 class="card-title fw-bold">Mixed Nuts Deluxe</h5>
+                <p class="card-text text-muted">
+                  Premium selection of roasted nuts, perfect for healthy
+                  snacking
+                </p>
+                <div class="mb-2">
+                  <span class="text-warning">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </span>
+                  <small class="text-muted">(4.8)</small>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="h5 text-success fw-bold mb-0"
+                    >$8.99 <small class="text-muted">/bag</small></span
+                  >
+                  <button class="btn btn-success add-to-cart">
+                    <i class="bi bi-cart-plus me-1"></i>Add to Cart
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="text-center feature-item">
-              <div
-                class="feature-icon bg-warning text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
-              >
-                <i class="bi bi-truck fs-1"></i>
-              </div>
-              <h4 class="fw-bold">Fast Delivery</h4>
-              <p class="text-muted">
-                Same-day delivery available for orders placed before 2 PM
-              </p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="text-center feature-item">
-              <div
-                class="feature-icon bg-danger text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
-              >
-                <i class="bi bi-star fs-1"></i>
-              </div>
-              <h4 class="fw-bold">Premium Quality</h4>
-              <p class="text-muted">
-                Hand-picked products that meet our strict quality standards
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Newsletter Section -->
-    <section class="py-5 bg-success text-white">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-8 text-center">
-            <h3 class="fw-bold mb-3">Stay Updated with Fresh Deals!</h3>
-            <p class="mb-4">
-              Subscribe to our newsletter and get exclusive offers on premium
-              products
-            </p>
-            <div class="row justify-content-center">
-              <div class="col-md-8">
-                <form>
-                  <div class="input-group input-group-lg">
-                    <input
-                      type="email"
-                      class="form-control subscribe-input"
-                      placeholder="Enter your email address"
-                      required
-                    />
-                    <button
-                      class="btn btn-light text-success fw-semibold btn-lg"
-                      type="submit"
-                      style="padding-left: 1.5rem; padding-right: 1.5rem"
-                    >
-                      Subscribe
-                    </button>
-                  </div>
-                </form>
+          <div class="col-lg-4 col-md-6 product-item" data-category="beverages">
+            <div class="card h-100 shadow-sm product-card">
+              <div
+                class="card-img-top bg-dark bg-opacity-10 d-flex align-items-center justify-content-center"
+                style="height: 250px"
+              >
+                <span class="display-1">☕</span>
+              </div>
+              <div class="card-body">
+                <span class="badge bg-dark mb-2">Craft</span>
+                <h5 class="card-title fw-bold">Artisan Coffee Beans</h5>
+                <p class="card-text text-muted">
+                  Single-origin coffee beans, medium roast with rich flavor
+                </p>
+                <div class="mb-2">
+                  <span class="text-warning">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </span>
+                  <small class="text-muted">(4.9)</small>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="h5 text-success fw-bold mb-0"
+                    >$12.99 <small class="text-muted">/bag</small></span
+                  >
+                  <button class="btn btn-success add-to-cart">
+                    <i class="bi bi-cart-plus me-1"></i>Add to Cart
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -425,17 +487,34 @@
         });
       });
 
-      // Smooth scrolling for anchor links
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute("href"));
-          if (target) {
-            target.scrollIntoView({
-              behavior: "smooth",
-              block: "start",
-            });
-          }
+      // Product filtering
+      const filterButtons = document.querySelectorAll(".filter-btn");
+      const productItems = document.querySelectorAll(".product-item");
+
+      filterButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+          // Update active button
+          filterButtons.forEach((btn) => {
+            btn.classList.remove("btn-success", "active");
+            btn.classList.add("btn-outline-success");
+          });
+          this.classList.remove("btn-outline-success");
+          this.classList.add("btn-success", "active");
+
+          // Filter products
+          const filter = this.getAttribute("data-filter");
+
+          productItems.forEach((item) => {
+            if (
+              filter === "all" ||
+              item.getAttribute("data-category") === filter
+            ) {
+              item.style.display = "block";
+              item.style.animation = "fadeIn 0.5s ease-in";
+            } else {
+              item.style.display = "none";
+            }
+          });
         });
       });
     </script>
