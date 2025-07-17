@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FreshMart - Premium Food & Beverages</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <header>
+      <nav
+        class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm"
+      >
+        <div class="container">
+          <a
+            class="navbar-brand fw-bold text-success fs-3 logo-brand"
+            href="index.html"
+          >
+            FreshMart
+          </a>
+
+          <button
+            class="navbar-toggler border-0 shadow-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active fw-semibold" href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-semibold" href="products.html"
+                  >Products</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-semibold" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-semibold" href="contact.html">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-semibold text-success" href="#cart">
+                  <i class="bi bi-cart3 me-1"></i>Cart (<span id="cart-count"
+                    >0</span
+                  >)
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section bg-success bg-gradient text-white">
+      <div class="container">
+        <div class="row align-items-center min-vh-100 py-5">
+          <div class="col-lg-6">
+            <h1 class="display-4 fw-bold mb-4 animate-fade-in">
+              Fresh & Premium Quality
+            </h1>
+            <p class="lead mb-4 animate-fade-in-delay">
+              Discover the finest selection of organic foods and premium
+              beverages delivered fresh to your doorstep
+            </p>
+            <div class="d-flex gap-3 flex-wrap animate-fade-in-delay-2">
+              <a
+                href="products.html"
+                class="btn btn-light btn-lg px-4 py-3 fw-semibold"
+              >
+                <i class="bi bi-bag-check me-2"></i>Shop Now
+              </a>
+              <a
+                href="about.html"
+                class="btn btn-outline-light btn-lg px-4 py-3 fw-semibold"
+              >
+                <i class="bi bi-info-circle me-2"></i>Learn More
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-6 text-center">
+            <div
+              class="hero-card bg-white text-dark p-5 rounded-4 shadow-lg animate-float"
+            >
+              <i class="bi bi-basket2 text-success display-1 mb-3"></i>
+              <h3 class="fw-bold text-success">🥗 Fresh Produce</h3>
+              <p class="mb-0 text-muted">Organic & Natural</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="display-5 fw-bold text-dark">Featured Products</h2>
+          <p class="lead text-muted">
+            Handpicked favorites from our premium collection
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm product-card">
+              <div
+                class="card-img-top bg-success bg-opacity-10 d-flex align-items-center justify-content-center"
+                style="height: 200px"
+              >
+                <span class="display-1">🍎</span>
+              </div>
+              <div class="card-body">
+                <span class="badge bg-success mb-2">Fresh</span>
+                <h5 class="card-title fw-bold">Organic Red Apples</h5>
+                <p class="card-text text-muted">
+                  Sweet and crispy organic apples, perfect for healthy snacking
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="h5 text-success fw-bold mb-0"
+                    >$3.99 <small class="text-muted">/lb</small></span
+                  >
+                  <button class="btn btn-success btn-sm add-to-cart">
+                    <i class="bi bi-cart-plus me-1"></i>Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm product-card">
+              <div
+                class="card-img-top bg-warning bg-opacity-10 d-flex align-items-center justify-content-center"
+                style="height: 200px"
+              >
+                <span class="display-1">🥤</span>
+              </div>
+              <div class="card-body">
+                <span class="badge bg-warning mb-2">Premium</span>
+                <h5 class="card-title fw-bold">Fresh Orange Juice</h5>
+                <p class="card-text text-muted">
+                  100% pure orange juice, no added sugar or preservatives
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="h5 text-success fw-bold mb-0"
+                    >$4.99 <small class="text-muted">/bottle</small></span
+                  >
+                  <button class="btn btn-success btn-sm add-to-cart">
+                    <i class="bi bi-cart-plus me-1"></i>Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm product-card">
+              <div
+                class="card-img-top bg-info bg-opacity-10 d-flex align-items-center justify-content-center"
+                style="height: 200px"
+              >
+                <span class="display-1">🥛</span>
+              </div>
+              <div class="card-body">
+                <span class="badge bg-info mb-2">Farm Fresh</span>
+                <h5 class="card-title fw-bold">Organic Whole Milk</h5>
+                <p class="card-text text-muted">
+                  Creamy whole milk from grass-fed cows, hormone-free
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="h5 text-success fw-bold mb-0"
+                    >$5.29 <small class="text-muted">/gallon</small></span
+                  >
+                  <button class="btn btn-success btn-sm add-to-cart">
+                    <i class="bi bi-cart-plus me-1"></i>Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-5">
+          <a href="products.html" class="btn btn-success btn-lg px-5 py-3">
+            <i class="bi bi-grid me-2"></i>View All Products
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="text-center feature-item">
+              <div
+                class="feature-icon bg-success text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+              >
+                <i class="bi bi-leaf fs-1"></i>
+              </div>
+              <h4 class="fw-bold">100% Organic</h4>
+              <p class="text-muted">
+                All our products are certified organic and naturally grown
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="text-center feature-item">
+              <div
+                class="feature-icon bg-warning text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+              >
+                <i class="bi bi-truck fs-1"></i>
+              </div>
+              <h4 class="fw-bold">Fast Delivery</h4>
+              <p class="text-muted">
+                Same-day delivery available for orders placed before 2 PM
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="text-center feature-item">
+              <div
+                class="feature-icon bg-danger text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+              >
+                <i class="bi bi-star fs-1"></i>
+              </div>
+              <h4 class="fw-bold">Premium Quality</h4>
+              <p class="text-muted">
+                Hand-picked products that meet our strict quality standards
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-5 bg-success text-white">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <h3 class="fw-bold mb-3">Stay Updated with Fresh Deals!</h3>
+            <p class="mb-4">
+              Subscribe to our newsletter and get exclusive offers on premium
+              products
+            </p>
+            <div class="row justify-content-center">
+              <div class="col-md-8">
+                <form>
+                  <div class="input-group input-group-lg">
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Enter your email address"
+                      required
+                    />
+                    <button
+                      class="btn btn-light text-success fw-semibold btn-lg"
+                      type="submit"
+                      style="padding-left: 1.5rem; padding-right: 1.5rem"
+                    >
+                      Subscribe
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <h5 class="fw-bold mb-3">FreshMart</h5>
+            <p class="text-muted">
+              Your trusted source for premium quality foods and beverages since
+              2004.
+            </p>
+            <div class="d-flex gap-3">
+              <a href="#" class="text-light fs-4"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a href="#" class="text-light fs-4"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a href="#" class="text-light fs-4"
+                ><i class="bi bi-twitter"></i
+              ></a>
+              <a href="#" class="text-light fs-4"
+                ><i class="bi bi-youtube"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6">
+            <h6 class="fw-bold mb-3">Quick Links</h6>
+            <ul class="list-unstyled">
+              <li>
+                <a href="index.html" class="text-decoration-none">Home</a>
+              </li>
+              <li>
+                <a href="products.html" class="text-decoration-none"
+                  >Products</a
+                >
+              </li>
+              <li>
+                <a href="about.html" class="text-decoration-none">About Us</a>
+              </li>
+              <li>
+                <a href="contact.html" class="text-decoration-none">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <h6 class="fw-bold mb-3">Categories</h6>
+            <ul class="list-unstyled">
+              <li>
+                <a href="products.html" class="text-decoration-none"
+                  >Fresh Fruits</a
+                >
+              </li>
+              <li>
+                <a href="products.html" class="text-decoration-none"
+                  >Premium Beverages</a
+                >
+              </li>
+              <li>
+                <a href="products.html" class="text-decoration-none"
+                  >Dairy Products</a
+                >
+              </li>
+              <li>
+                <a href="products.html" class="text-decoration-none"
+                  >Healthy Snacks</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <h6 class="fw-bold mb-3">Contact Info</h6>
+            <ul class="list-unstyled">
+              <li>
+                <i class="bi bi-geo-alt me-2"></i>123 Fresh Street, Green City
+              </li>
+              <li><i class="bi bi-telephone me-2"></i>+1 (555) 123-FRESH</li>
+              <li><i class="bi bi-envelope me-2"></i>hello@freshmart.com</li>
+            </ul>
+          </div>
+        </div>
+
+        <hr class="my-4" />
+
+        <div class="row">
+          <div class="col-12">
+            <p class="text-center small mb-0 rights-text">
+              &copy; 2024 FreshMart. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+      // Cart functionality
+      let cartCount = 0;
+      const cartCountElement = document.getElementById("cart-count");
+      const addToCartButtons = document.querySelectorAll(".add-to-cart");
+
+      addToCartButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+          cartCount++;
+          cartCountElement.textContent = cartCount;
+
+          // Visual feedback
+          this.innerHTML = '<i class="bi bi-check me-1"></i>Added!';
+          this.classList.remove("btn-success");
+          this.classList.add("btn-outline-success");
+
+          setTimeout(() => {
+            this.innerHTML = '<i class="bi bi-cart-plus me-1"></i>Add to Cart';
+            this.classList.remove("btn-outline-success");
+            this.classList.add("btn-success");
+          }, 2000);
+        });
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
