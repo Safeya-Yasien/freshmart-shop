@@ -356,6 +356,12 @@ footer {
 }
 
 /* Responsive Design Enhancements */
+@media (max-width: 992px) {
+  .nav-link::after {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
   .hero-section {
     min-height: 80vh;
@@ -385,10 +391,6 @@ footer {
 
   .navbar-nav {
     padding: 1rem 0;
-  }
-
-  .nav-link::after {
-    display: none;
   }
 }
 
